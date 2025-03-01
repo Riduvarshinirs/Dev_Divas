@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    
+    /* Smooth Merging Gradient Background */
+    background: linear-gradient(-45deg, #4A90E2, #F5F5F5, #7E57C2, #4A90E2);
+    background-size: 400% 400%;
+    animation: moveBackground 8s infinite alternate ease-in-out;
+}
+
+/* Background Animation */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main {
+    background-color: rgba(255, 255, 255, 0.85); /* Soft transparent white */
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    transition: transform 0.3s ease;
+    width: 420px;
+    text-align: center;
+}
+
+h1 {
+    color: #512DA8; /* Deep lavender */
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #444;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    background: linear-gradient(90deg, #673AB7, #3F51B5);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+

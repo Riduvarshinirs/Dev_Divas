@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>SignUp</title>
+	<link rel="stylesheet"
+		href="style.css">
+</head>
+
+<body>
+	<div class="main">
+		<h1>Startup Recomender</h1>
+		<h3>Create an account</h3>
+		<form action="">
+			<label for="first">
+				Create a Username
+			</label>
+			<input type="text"
+				id="first"
+				name="first"
+				placeholder="Username" required>
+
+			<label for="password">
+				Enter mail id
+			</label>
+			<input type="mail"
+				id="mail"
+				name="mail"
+				placeholder="mail id" required>
+            <label for="password">
+                Create a password           
+             </label>
+            <input type="text"
+                id="password"
+                name="password"
+                    placeholder="password" required>
+
+			<div class="wrap">
+				<button type="submit" onclick="validateForm()">Create An Account</button>
+			</div>
+		</form>
+		<p>
+			<a href="#"
+			style="text-decoration: none;">
+				
+			</a>
+		</p>
+	</div>
+	<script>
+
+        function validateForm() {
+            event.preventDefault();
+            var first = document.getElementsByName("first")[0].value;
+            var mail = document.getElementsByName("mail")[0].value;
+            var password = document.getElementsByName("password")[0].value;
+            
+
+            if (first === '' || mail === '' || password === '' ) {
+                alert("All fields are required");
+                return false;
+            }
+            
+            window.location.href = "login.html";
+        }
+    </script>
+	
+</body>
+
+</html>
